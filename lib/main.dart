@@ -1,4 +1,4 @@
-import 'package:fitness_tracking_app/features/splash_screen.dart';
+import 'package:fitness_tracking_app/features/splash/screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
