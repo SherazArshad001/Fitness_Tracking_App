@@ -1,23 +1,54 @@
 class AppImages {
   // Icons
-  static const String homeIcon = '';
-  static const String profileIcon = '';
-  static const String settingsIcon = '';
+  static const String bottle = 'assets/icons/bottleIcon.png';
 
-  // Backgrounds
-  static const String loginBg = '';
-  static const String dashboardBg = '';
-  static const String profileBg = '';
+  static const String explore = 'assets/icons/exploreIcon.png';
 
-  // Logos
-  static const String logo = '';
-  static const String darkLogo = '';
+  static const String heartbeat = 'assets/icons/heartbeatIcon.png';
 
-  // Products
-  static const String product1 = '';
-  static const String product2 = '';
+  static const String home = 'assets/icons/Home.png';
 
-  // Users
-  static const String user1 = '';
-  static const String user2 = '';
+  static const String profile = 'assets/icons/profile.png';
+
+  static const String shoe = 'assets/icons/shoeIcon.png';
+
+  static const String water = 'assets/icons/waterIcon.png';
+
+  static const String analytics = 'assets/icons/statisticIcon.png';
+
+  static const String running = 'assets/icons/runningIcon.png';
+
+  static const String moon = 'assets/icons/moonIcon.png';
+
+  // ExerciseImages
+  static const String exercise1 = 'assets/images/image.png';
+
+  static const String exercise2 = 'assets/images/image1.png';
+
+  static const String exercise3 = 'assets/images/image2.png';
+
+  static const String exercise4 = 'assets/images/image3.png';
+
+  static const String exercise5 = 'assets/images/image4.png';
+
+  static const String exercise6 = 'assets/images/image5.png';
+
+  static const String exercise7 = 'assets/images/image6.png';
+
+  static const String exercise8 = 'assets/images/image7.png';
+
+  static const String exercise9 = 'assets/images/image8.png';
+
+  static const String exercise10 = 'assets/images/image9.png';
+
+  static const String exercise11 = 'assets/images/image10.png';
+  static const String exercise12 = 'assets/images/image11.png';
+
+//splashImage
+
+  static const String splashImage = 'assets/images/splash.png';
+
+  // CardImages
+  static const String cardImage1 = 'assets/images/card_image1.png';
+  static const String cardImage2 = 'assets/images/card_image2.png';
 }
