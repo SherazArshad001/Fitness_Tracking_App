@@ -8,6 +8,7 @@ class AppColors {
   // Background Colors
   static const Color background = Color(0xFFF5F5F5);
   static const Color cardBackground = Color(0xFF384046);
+  static const Color transparent = Colors.transparent;
 
   // Text Colors
   static const Color textPrimary = Color(0xff192126);
@@ -18,11 +19,4 @@ class AppColors {
   static const Color heartRateColor = Color(0xffED4747);
   static const Color stepBarColor = Color(0xffFFE8C6);
   static const Color stepBarDarkColor = Color(0xffFCC46F);
-
-
-  
-
-
-
-
 }

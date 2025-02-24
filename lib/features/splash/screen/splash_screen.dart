@@ -9,21 +9,24 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Positioned.fill(
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                Image.asset(
-                  AppImages.splashImage,
-                  fit: BoxFit.cover,
-                  width: MediaQuery.sizeOf(context).width,
-                ),
-                SplashFadeEffect()
-              ],
-            ),
-            SplashBottomContent()
-          ],
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Positioned.fill(
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Image.asset(
+                    AppImages.splashImage,
+                    fit: BoxFit.cover,
+                    width: MediaQuery.sizeOf(context).width,
+                  ),
+                  SplashFadeEffect()
+                ],
+              ),
+              SplashBottomContent()
+            ],
+          ),
         ),
       ),
     );
