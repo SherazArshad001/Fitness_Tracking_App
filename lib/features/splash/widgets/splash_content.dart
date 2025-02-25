@@ -1,4 +1,3 @@
-
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
 import 'package:fitness_tracking_app/features/splash/widgets/app_button.dart';
 import 'package:flutter/material.dart';

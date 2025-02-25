@@ -1,6 +1,6 @@
 
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
-import 'package:fitness_tracking_app/features/home/screen/home_page.dart';
+import 'package:fitness_tracking_app/features/home/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class AppButton extends StatelessWidget {
