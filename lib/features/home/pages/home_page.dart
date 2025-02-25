@@ -17,6 +17,7 @@ class HomePage extends StatelessWidget {
     final exercise = ExerciseHelper.getExercises();
 
     return Scaffold(
+      backgroundColor: AppColors.background,
       body: GestureDetector(
         onTap: () {
           FocusScope.of(context).unfocus();

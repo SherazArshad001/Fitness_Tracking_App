@@ -1,3 +1,5 @@
+import 'package:fitness_tracking_app/core/constants/app_colors.dart';
+import 'package:fitness_tracking_app/core/constants/app_images.dart';
 import 'package:fitness_tracking_app/features/analytics/pages/statistics_page.dart';
 import 'package:fitness_tracking_app/features/explore/pages/explore_page.dart';
 import 'package:fitness_tracking_app/features/profile/pages/profile_page.dart';
@@ -21,6 +23,20 @@ class BottomNavBarState extends State<BottomNavBar> {
     const ProfilePage(),
   ];
 
+  final List<String> _icons = [
+    AppImages.home,
+    AppImages.explore,
+    AppImages.analytics,
+    AppImages.profile,
+  ];
+
+  final List<String> _labels = [
+    'Home',
+    'Explore',
+    'Statistics',
+    'Profile',
+  ];
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -30,33 +46,59 @@ class BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background,
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.deepPurple,
-        unselectedItemColor: Colors.grey,
-        showSelectedLabels: true,
-        showUnselectedLabels: true,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            label: 'Explore',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bar_chart),
-            label: 'Statistics',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
+      bottomNavigationBar: Container(
+        color: AppColors.primaryDark,
+        height: 70,
+        padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: List.generate(_icons.length, (index) {
+            final bool isSelected = _selectedIndex == index;
+            return Flexible(
+              child: GestureDetector(
+                onTap: () => _onItemTapped(index),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 300),
+                  width: isSelected ? 100 : 50, // Keep within bounds
+                  height: 36,
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  decoration: BoxDecoration(
+                    color: isSelected ? AppColors.primary : Colors.transparent,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          _icons[index],
+                          color:
+                              isSelected ? AppColors.primaryDark : Colors.grey,
+                          width: 24,
+                          height: 24,
+                        ),
+                        if (isSelected) ...[
+                          const SizedBox(width: 8),
+                          Text(
+                            _labels[index],
+                            style: TextStyle(
+                              color: AppColors.primaryDark,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            );
+          }),
+        ),
       ),
     );
   }

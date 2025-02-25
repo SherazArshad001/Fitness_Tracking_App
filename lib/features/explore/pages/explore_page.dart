@@ -1,3 +1,4 @@
+import 'package:fitness_tracking_app/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ExplorePage extends StatelessWidget {
@@ -5,6 +6,9 @@ class ExplorePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: AppColors.background,
+
+    );
   }
 }
