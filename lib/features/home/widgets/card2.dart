@@ -12,7 +12,7 @@ class ExerciseProgressCard extends StatelessWidget {
     return Stack(
       children: [
         Card(
-          elevation: 0.1,
+          elevation: 0.7,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
@@ -20,19 +20,21 @@ class ExerciseProgressCard extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
-              mainAxisSize: MainAxisSize.min, // Prevents infinite width issue
+              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(
                   width: 100,
                   height: 100,
-                  child: Image.asset(
-                    exercise.imagePath,
-                    fit: BoxFit.cover,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15),
+                    child: Image.asset(
+                      exercise.imagePath,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 const SizedBox(width: 20),
                 Flexible(
-                  // Use Flexible with loose fit
                   fit: FlexFit.loose,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,20 +49,40 @@ class ExerciseProgressCard extends StatelessWidget {
                       const SizedBox(height: 10),
                       Text(exercise.description),
                       const SizedBox(height: 10),
-                      LinearProgressIndicator(
-                        value: exercise.progress / 100,
-                        backgroundColor: AppColors.textWhite,
-                        color: AppColors.primary,
-                        minHeight: 10,
-                      ),
-                      Text(
-                        '${exercise.progress.toInt()}%',
-                        style: const TextStyle(
-                          fontSize: 8,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
+                      Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          LinearProgressIndicator(
+                            value: exercise.progress / 100,
+                            backgroundColor: AppColors.textWhite,
+                            color: AppColors.primary,
+                            minHeight: 10,
+                          ),
+                          LayoutBuilder(
+                            builder: (context, constraints) {
+                              final maxWidth = constraints.maxWidth;
+                              return Row(
+                                children: [
+                                  Container(
+                                    width:
+                                        (maxWidth * (exercise.progress / 100))
+                                            .clamp(30.0, maxWidth),
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      '${exercise.progress.toInt()}%',
+                                      style: const TextStyle(
+                                        fontSize: 8,
+                                        fontWeight: FontWeight.bold,
+                                        color: AppColors.textPrimary,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              );
+                            },
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ),

@@ -61,7 +61,7 @@ class BottomNavBarState extends State<BottomNavBar> {
                 onTap: () => _onItemTapped(index),
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
-                  width: isSelected ? 100 : 50, // Keep within bounds
+                  width: isSelected ? 100 : 50,
                   height: 36,
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   decoration: BoxDecoration(

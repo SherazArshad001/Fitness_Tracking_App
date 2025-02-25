@@ -33,7 +33,6 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Greetings Section
                   const Text(
                     'Good Morning',
                     style: TextStyle(
@@ -51,15 +50,10 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-
-                  // Search TextField
                   const HomeTextfield(),
                   const SizedBox(height: 10),
-
-                  // Popular Workouts Section
                   const LargeText(largeHintText: 'Popular Workouts'),
                   const SizedBox(height: 10),
-
                   SizedBox(
                     height: 190,
                     child: ListView.separated(
@@ -79,12 +73,8 @@ class HomePage extends StatelessWidget {
                       },
                     ),
                   ),
-
                   const SizedBox(height: 20),
-
-                  // Today's Plan Section
                   const LargeText(largeHintText: "Today Plan"),
-
                   ListView.separated(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
