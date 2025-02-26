@@ -4,22 +4,16 @@ class HomeTextfield extends StatefulWidget {
   const HomeTextfield({super.key});
 
   @override
-  _HomeTextfieldState createState() => _HomeTextfieldState();
+  HomeTextfieldState createState() => HomeTextfieldState();
 }
 
-class _HomeTextfieldState extends State<HomeTextfield> {
-  final FocusNode _textFieldFocusNode = FocusNode();
-
-  @override
-  void dispose() {
-    _textFieldFocusNode.dispose(); // Dispose to avoid memory leaks
-    super.dispose();
-  }
-
+class HomeTextfieldState extends State<HomeTextfield> {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      focusNode: _textFieldFocusNode,
+      onTapOutside: (event) {
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
       decoration: InputDecoration(
         labelText: 'Search Exercise',
         hintText: 'Search Exercise',

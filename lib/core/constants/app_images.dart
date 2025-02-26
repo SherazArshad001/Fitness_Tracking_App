@@ -22,6 +22,8 @@ class AppImages {
 
   static const String flame = 'assets/icons/flame.png';
 
+  static const String energy = 'assets/icons/energy.png';
+
   static const String time = 'assets/icons/time.png';
 
   // ExerciseImages

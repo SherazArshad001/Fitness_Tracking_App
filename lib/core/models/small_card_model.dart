@@ -31,8 +31,9 @@ List<Exercise> exerciseData = [
       level: "Advanced",
       imagePath: AppImages.exercise3),
   Exercise(
-      title: "Arm Toning",
-      duration: "8 Min",
-      level: "Beginner",
-      imagePath: AppImages.exercise4),
+    title: "Arm Toning",
+    duration: "8 Min",
+    level: "Beginner",
+    imagePath: AppImages.exercise4,
+  ),
 ];
