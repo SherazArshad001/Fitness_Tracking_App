@@ -53,7 +53,9 @@ class ImageCard extends StatelessWidget {
                       height: 0.9,
                     ),
                   ),
-                  Spacer(),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

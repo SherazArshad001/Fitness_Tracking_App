@@ -33,23 +33,26 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.textWhite,
-      body: Positioned.fill(
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                Image.asset(
-                  AppImages.splashImage,
-                  fit: BoxFit.cover,
-                  width: MediaQuery.sizeOf(context).width,
-                ),
-                SplashFadeEffect()
-              ],
-            ),
-            SplashBottomContent()
-          ],
-        ),
+      backgroundColor: AppColors.whiteColor,
+      body: Stack(
+        // ✅ Use Stack instead of Positioned.fill
+        children: [
+          Column(
+            children: [
+              Stack(
+                children: [
+                  Image.asset(
+                    AppImages.splashImage,
+                    fit: BoxFit.cover,
+                    width: MediaQuery.sizeOf(context).width,
+                  ),
+                  SplashFadeEffect(),
+                ],
+              ),
+              SplashBottomContent(),
+            ],
+          ),
+        ],
       ),
     );
   }

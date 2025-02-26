@@ -1,5 +1,5 @@
 import 'package:fitness_tracking_app/core/constants/app_images.dart';
-import 'package:fitness_tracking_app/core/model/exercise_model.dart';
+import 'package:fitness_tracking_app/core/models/exercise_model.dart';
 
 class ExerciseHelper {
   static List<ExerciseModel> getExercises() {

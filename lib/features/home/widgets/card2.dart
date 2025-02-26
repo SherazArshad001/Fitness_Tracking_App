@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
-import 'package:fitness_tracking_app/core/model/exercise_model.dart';
+import 'package:fitness_tracking_app/core/models/exercise_model.dart';
 
 class ExerciseProgressCard extends StatelessWidget {
   final ExerciseModel exercise;
@@ -16,7 +16,7 @@ class ExerciseProgressCard extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          color: AppColors.textWhite,
+          color: AppColors.whiteColor,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -34,8 +34,7 @@ class ExerciseProgressCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 20),
-                Flexible(
-                  fit: FlexFit.loose,
+                Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -54,30 +53,34 @@ class ExerciseProgressCard extends StatelessWidget {
                         children: [
                           LinearProgressIndicator(
                             value: exercise.progress / 100,
-                            backgroundColor: AppColors.textWhite,
+                            backgroundColor: AppColors.whiteColor,
                             color: AppColors.primary,
                             minHeight: 10,
                           ),
                           LayoutBuilder(
                             builder: (context, constraints) {
                               final maxWidth = constraints.maxWidth;
-                              return Row(
-                                children: [
-                                  Container(
-                                    width:
-                                        (maxWidth * (exercise.progress / 100))
-                                            .clamp(30.0, maxWidth),
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      '${exercise.progress.toInt()}%',
-                                      style: const TextStyle(
-                                        fontSize: 8,
-                                        fontWeight: FontWeight.bold,
-                                        color: AppColors.textPrimary,
+                              return SizedBox(
+                                width:
+                                    maxWidth, // Ensure it doesn't exceed parent width
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      width:
+                                          (maxWidth * (exercise.progress / 100))
+                                              .clamp(30.0, maxWidth),
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        '${exercise.progress.toInt()}%',
+                                        style: const TextStyle(
+                                          fontSize: 8,
+                                          fontWeight: FontWeight.bold,
+                                          color: AppColors.textPrimary,
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               );
                             },
                           ),

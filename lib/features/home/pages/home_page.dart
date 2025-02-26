@@ -1,9 +1,9 @@
-import 'package:fitness_tracking_app/core/common/widgets/helper_text.dart';
+import 'package:fitness_tracking_app/core/constants/helper_text.dart';
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
 import 'package:fitness_tracking_app/core/helper/exercise_helper.dart';
 import 'package:fitness_tracking_app/core/helper/workout_helper.dart';
-import 'package:fitness_tracking_app/core/model/workout_model.dart';
-import 'package:fitness_tracking_app/features/home/widgets/card.dart';
+import 'package:fitness_tracking_app/core/models/workout_model.dart';
+import 'package:fitness_tracking_app/features/home/widgets/app_main_card.dart';
 import 'package:fitness_tracking_app/features/home/widgets/card2.dart';
 import 'package:fitness_tracking_app/features/home/widgets/textfield.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<WorkoutCard> workouts = WorkoutCardHelper.getWorkoutCards();
+    final List<WorkoutCardModel> workouts = WorkoutCardHelper.getWorkoutCards();
     final exercise = ExerciseHelper.getExercises();
 
     return Scaffold(

@@ -12,8 +12,9 @@ class AppColors {
 
   // Text Colors
   static const Color textPrimary = Color(0xff192126);
+
   static const Color trainingBarColor = Color(0xffA48AED);
-  static const Color textWhite = Color(0xFFFFFFFF);
+  static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color waterColor = Color(0xff95CCE3);
   static const Color motivateColor = Color(0xffF6CFCF);
   static const Color heartRateColor = Color(0xffED4747);

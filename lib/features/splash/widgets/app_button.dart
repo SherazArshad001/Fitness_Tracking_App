@@ -1,6 +1,5 @@
-
+import 'package:fitness_tracking_app/core/common/bottom_navbar/app_bottom_navbar.dart';
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
-import 'package:fitness_tracking_app/features/home/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class AppButton extends StatelessWidget {
@@ -20,7 +19,7 @@ class AppButton extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => HomePage(),
+            builder: (context) => BottomNavBar(),
           ),
         );
       },
