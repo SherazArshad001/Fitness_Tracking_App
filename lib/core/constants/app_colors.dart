@@ -9,10 +9,10 @@ class AppColors {
   static const Color background = Color(0xFFF5F5F5);
   static const Color cardBackground = Color(0xFF384046);
   static const Color transparent = Colors.transparent;
+  static const Color cardBackground1 = Color(0xffEAECFF);
 
   // Text Colors
   static const Color textPrimary = Color(0xff192126);
-
   static const Color trainingBarColor = Color(0xffA48AED);
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color waterColor = Color(0xff95CCE3);
