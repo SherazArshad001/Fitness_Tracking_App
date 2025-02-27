@@ -1,5 +1,5 @@
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
-import 'package:fitness_tracking_app/core/models/challenge_box_model.dart';
+import 'package:fitness_tracking_app/core/models/challenge_model.dart';
 import 'package:flutter/material.dart';
 
 class ChallengeBox extends StatelessWidget {

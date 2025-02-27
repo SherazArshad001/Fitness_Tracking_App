@@ -1,12 +1,12 @@
-import 'package:fitness_tracking_app/core/models/challenge_box_model.dart';
+import 'package:fitness_tracking_app/core/models/challenge_model.dart';
 import 'package:fitness_tracking_app/features/explore/widgets/challenge_box.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
-import 'package:fitness_tracking_app/core/constants/helper_text.dart';
-import 'package:fitness_tracking_app/core/models/small_card_model.dart';
+import 'package:fitness_tracking_app/core/constants/app_text.dart';
+import 'package:fitness_tracking_app/core/models/exercise_card_model.dart';
 import 'package:fitness_tracking_app/features/explore/widgets/explore_main_card.dart';
-import 'package:fitness_tracking_app/features/explore/widgets/explore_small_card.dart';
+import 'package:fitness_tracking_app/features/explore/widgets/explore_exercise_card.dart';
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({super.key});
@@ -23,7 +23,7 @@ class ExplorePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const ExploreCard(),
+                const ExploreMainCard(),
                 const SizedBox(height: 10),
                 const LargeText(largeHintText: "Best For You"),
                 const SizedBox(height: 10),
@@ -39,7 +39,7 @@ class ExplorePage extends StatelessWidget {
                     ),
                     itemCount: exerciseData.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return ExploreSmallCard(
+                      return ExploreExerciseCard(
                         exercise: exerciseData[index],
                       );
                     },

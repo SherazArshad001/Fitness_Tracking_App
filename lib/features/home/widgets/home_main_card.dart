@@ -1,7 +1,7 @@
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class ImageCard extends StatelessWidget {
+class HomeMainCard extends StatelessWidget {
   final String backgroundImagePath;
   final String mainText;
   final String box1IconPath;
@@ -9,7 +9,7 @@ class ImageCard extends StatelessWidget {
   final String box2IconPath;
   final String box2Text;
 
-  const ImageCard({
+  const HomeMainCard({
     super.key,
     required this.backgroundImagePath,
     required this.mainText,

@@ -1,11 +1,11 @@
-class ExerciseModel {
+class ExercisePlanModel {
   final String title;
   final String description;
   final String imagePath;
   final double progress;
   final String difficulty;
 
-  ExerciseModel({
+  ExercisePlanModel({
     required this.title,
     required this.description,
     required this.imagePath,

@@ -1,5 +1,6 @@
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
 import 'package:fitness_tracking_app/core/constants/app_images.dart';
+import 'package:fitness_tracking_app/core/constants/app_text.dart';
 import 'package:fitness_tracking_app/features/analytics/pages/statistics_page.dart';
 import 'package:fitness_tracking_app/features/explore/pages/explore_page.dart';
 import 'package:fitness_tracking_app/features/profile/pages/profile_page.dart';
@@ -31,10 +32,10 @@ class BottomNavBarState extends State<BottomNavBar> {
   ];
 
   final List<String> _labels = [
-    'Home',
-    'Explore',
-    'Statistics',
-    'Profile',
+    AppText.home,
+    AppText.explore,
+    AppText.statistics,
+    AppText.profile,
   ];
 
   void _onItemTapped(int index) {

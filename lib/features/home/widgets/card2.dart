@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
-import 'package:fitness_tracking_app/core/models/exercise_model.dart';
+import 'package:fitness_tracking_app/core/models/exercise_plan_model.dart';
 
 class ExerciseProgressCard extends StatelessWidget {
-  final ExerciseModel exercise;
+  final ExercisePlanModel exercise;
 
   const ExerciseProgressCard({super.key, required this.exercise});
 

@@ -1,10 +1,10 @@
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
-import 'package:fitness_tracking_app/core/models/small_card_model.dart';
+import 'package:fitness_tracking_app/core/models/exercise_card_model.dart';
 import 'package:flutter/material.dart';
 
-class ExploreSmallCard extends StatelessWidget {
+class ExploreExerciseCard extends StatelessWidget {
   final Exercise exercise;
-  const ExploreSmallCard({
+  const ExploreExerciseCard({
     super.key,
     required this.exercise,
   });

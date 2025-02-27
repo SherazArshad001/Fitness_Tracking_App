@@ -1,4 +1,4 @@
-class WorkoutCardModel {
+class PopularWorkoutCardModel {
   final String backgroundImage;
   final String title;
   final String icon1;
@@ -6,7 +6,7 @@ class WorkoutCardModel {
   final String icon2;
   final String text2;
 
-  const WorkoutCardModel({
+  const PopularWorkoutCardModel({
     required this.backgroundImage,
     required this.title,
     required this.icon1,
