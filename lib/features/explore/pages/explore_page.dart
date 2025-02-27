@@ -19,7 +19,7 @@ class ExplorePage extends StatelessWidget {
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -28,14 +28,14 @@ class ExplorePage extends StatelessWidget {
                 const LargeText(largeHintText: "Best For You"),
                 const SizedBox(height: 10),
                 SizedBox(
-                  height: 250,
+                  height: 150,
                   child: GridView.builder(
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: 1.5,
-                      crossAxisSpacing: 10,
-                      mainAxisSpacing: 10,
+                      childAspectRatio: 2.3,
+                      crossAxisSpacing: 0,
+                      mainAxisSpacing: 0,
                     ),
                     itemCount: exerciseData.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -65,7 +65,6 @@ class ExplorePage extends StatelessWidget {
                         const SizedBox(height: 10),
                   ),
                 ),
-                
               ],
             ),
           ),

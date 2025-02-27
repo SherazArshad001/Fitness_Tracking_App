@@ -12,47 +12,43 @@ class ChallengeBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(3.0),
-      child: Container(
-        height: 110,
-        width: 110,
-        decoration: BoxDecoration(
-          color: challengeBoxModel.challengeColor,
-          borderRadius: BorderRadius.circular(
-            15,
-          ),
+    return Container(
+      height: 110,
+      width: 110,
+      decoration: BoxDecoration(
+        color: challengeBoxModel.challengeColor,
+        borderRadius: BorderRadius.circular(
+          15,
         ),
-        child: Stack(
-          children: [
-            Positioned(
-              right: 5,
-              bottom: 5,
-              child: Image.asset(
-                challengeBoxModel.challengeImage,
-                width: 50,
-                height: 50,
-              ),
+      ),
+      child: Stack(
+        children: [
+          Positioned(
+            right: 5,
+            bottom: 5,
+            child: Image.asset(
+              challengeBoxModel.challengeImage,
+              width: 50,
+              height: 50,
             ),
-            Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  challengeBoxModel.challengeText,
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color:
-                        challengeBoxModel.challengeText == 'Sprint\nChallenge'
-                            ? AppColors.background
-                            : AppColors.textPrimary,
-                  ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Align(
+              alignment: Alignment.bottomLeft,
+              child: Text(
+                challengeBoxModel.challengeText,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  color: challengeBoxModel.challengeText == 'Sprint\nChallenge'
+                      ? AppColors.background
+                      : AppColors.textPrimary,
                 ),
               ),
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }
