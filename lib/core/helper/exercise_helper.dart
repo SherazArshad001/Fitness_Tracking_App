@@ -14,7 +14,7 @@ class ExerciseHelper {
       ExercisePlanModel(
         title: 'Squats',
         description: '50 Squats a day',
-        imagePath: AppImages.exercise2,
+        imagePath: AppImages.exercise11,
         progress: 100.0,
         difficulty: 'Beginner',
       ),

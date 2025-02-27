@@ -13,6 +13,11 @@ class ExplorePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final List<Exercise> firstFourProducts =
+        Exercise.exerciseData.take(4).toList();
+    final List<Exercise> remainingProducts =
+        Exercise.exerciseData.skip(4).toList();
+
     return Scaffold(
       backgroundColor: AppColors.background,
       body: SafeArea(
@@ -27,23 +32,21 @@ class ExplorePage extends StatelessWidget {
                 const SizedBox(height: 10),
                 const LargeText(largeHintText: "Best For You"),
                 const SizedBox(height: 10),
-                SizedBox(
-                  height: 150,
-                  child: GridView.builder(
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      childAspectRatio: 2.3,
-                      crossAxisSpacing: 0,
-                      mainAxisSpacing: 0,
-                    ),
-                    itemCount: exerciseData.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return ExploreExerciseCard(
-                        exercise: exerciseData[index],
-                      );
-                    },
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 2.3,
+                    crossAxisSpacing: 10,
                   ),
+                  itemCount: firstFourProducts.length,
+                  itemBuilder: (context, index) {
+                    return ExploreExerciseCard(
+                      exercise: firstFourProducts[index],
+                    );
+                  },
                 ),
                 const SizedBox(height: 10),
                 const LargeText(largeHintText: "Challenge"),
@@ -51,10 +54,9 @@ class ExplorePage extends StatelessWidget {
                 SizedBox(
                   height: 100,
                   child: ListView.separated(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     scrollDirection: Axis.horizontal,
                     shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
                     itemCount: challengeData.length,
                     itemBuilder: (context, index) {
                       return ChallengeBox(
@@ -62,9 +64,28 @@ class ExplorePage extends StatelessWidget {
                       );
                     },
                     separatorBuilder: (context, index) =>
-                        const SizedBox(height: 10),
+                        const SizedBox(width: 10),
                   ),
                 ),
+                const SizedBox(height: 10),
+                const LargeText(largeHintText: "Fast Warmup"),
+                const SizedBox(height: 10),
+                GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 10,
+                    childAspectRatio: 2.3,
+                    crossAxisSpacing: 10,
+                  ),
+                  itemCount: remainingProducts.length,
+                  itemBuilder: (context, index) {
+                    return ExploreExerciseCard(
+                      exercise: remainingProducts[index],
+                    );
+                  },
+                )
               ],
             ),
           ),
