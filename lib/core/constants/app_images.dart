@@ -54,6 +54,10 @@ class AppImages {
 
   static const String splashImage = 'assets/images/splash.png';
 
+  static const String cycleImage = 'assets/images/cycle.png';
+
+  static const String mapImage = 'assets/images/map.png';
+
   // CardImages
   static const String cardImage1 = 'assets/images/card_image1.png';
   static const String cardImage2 = 'assets/images/card_image2.png';
