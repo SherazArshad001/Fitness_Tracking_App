@@ -22,6 +22,7 @@ class ExplorePage extends StatelessWidget {
       backgroundColor: AppColors.background,
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           scrollDirection: Axis.vertical,
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),

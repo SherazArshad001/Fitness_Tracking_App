@@ -22,14 +22,14 @@ class ExerciseHelper {
         title: 'Pull Ups',
         description: '30 Pull Ups a day',
         imagePath: AppImages.exercise3,
-        progress: 20.0,
+        progress: 70.0,
         difficulty: 'Advanced',
       ),
       ExercisePlanModel(
         title: 'Running',
         description: '5 Kilometer a day',
         imagePath: AppImages.exercise4,
-        progress: 20.0,
+        progress: 30.0,
         difficulty: 'Advanced',
       ),
     ];

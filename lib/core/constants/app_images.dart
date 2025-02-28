@@ -5,6 +5,7 @@ class AppImages {
   static const String explore = 'assets/icons/exploreIcon.png';
 
   static const String heartbeat = 'assets/icons/heartbeatIcon.png';
+  static const String hearRate = 'assets/icons/hearRate.png';
 
   static const String home = 'assets/icons/Home.png';
 
@@ -28,6 +29,9 @@ class AppImages {
 
   // ExerciseImages
   static const String exercise1 = 'assets/images/image.png';
+
+  static const String sleep = 'assets/images/sleep.png';
+  static const String waterImage = 'assets/images/waterImage.png';
 
   static const String exercise2 = 'assets/images/image1.png';
 

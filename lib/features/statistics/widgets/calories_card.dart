@@ -1,4 +1,3 @@
-
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
 import 'package:fitness_tracking_app/core/constants/app_text.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +17,7 @@ class CaloriesCard extends StatelessWidget {
         ),
       ),
       child: SizedBox(
-        width: 110,
+        width: 120,
         height: 70,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

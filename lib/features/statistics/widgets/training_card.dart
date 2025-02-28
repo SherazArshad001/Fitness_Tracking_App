@@ -1,4 +1,3 @@
-
 import 'package:fitness_tracking_app/core/constants/app_colors.dart';
 import 'package:fitness_tracking_app/features/statistics/widgets/training_progress.dart';
 import 'package:flutter/material.dart';
@@ -11,14 +10,14 @@ class TrainingTimeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: AppColors.cardBackground1,
+      color: AppColors.sleepCardColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(
           15,
         ),
       ),
       child: SizedBox(
-        width: 110,
+        width: 120,
         height: 130,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
