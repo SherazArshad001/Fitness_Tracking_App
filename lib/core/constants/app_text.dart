@@ -26,6 +26,6 @@ class AppText {
   static const String explore = 'explore';
   static const String statistics = 'Statistics';
   static const String profile = 'profile';
-  static const String greeting = 'Good Morning';
+  static const String greeting = 'Good Morning 🔥';
   static const String username = 'Sheraz Baloch';
 }
