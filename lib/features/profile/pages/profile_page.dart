@@ -37,6 +37,7 @@ class ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: appBarColor,
         elevation: 0,
         title: Center(

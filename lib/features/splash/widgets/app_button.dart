@@ -24,7 +24,7 @@ class AppButton extends StatelessWidget {
         );
       },
       child: Text(
-        'Get Started',
+        'Push Your Limits',
         style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,
