@@ -64,6 +64,8 @@ class AppImages {
 
   // CardImages
   static const String cardImage1 = 'assets/images/card_image1.png';
+  static const String userImage = 'assets/images/sheraz_baloch.jpg';
+
   static const String cardImage2 = 'assets/images/card_image2.png';
   static const String cardImage3 = 'assets/images/card_image3.png';
 }

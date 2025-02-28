@@ -20,6 +20,7 @@ class StatisticsPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
+          scrollDirection: Axis.vertical,
           child: Padding(
             padding:
                 const EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
@@ -31,6 +32,9 @@ class StatisticsPage extends StatelessWidget {
                   height: 10.0,
                 ),
                 LargeText(largeHintText: 'Today Report'),
+                SizedBox(
+                  height: 10.0,
+                ),
                 SizedBox(
                   width: MediaQuery.sizeOf(context).width,
                   height: 218,
